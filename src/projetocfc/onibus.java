@@ -9,6 +9,6 @@ package projetocfc;
  *
  * @author Tharles
  */
-public class onibus {
+public class onibus extends automovel{
     
 }

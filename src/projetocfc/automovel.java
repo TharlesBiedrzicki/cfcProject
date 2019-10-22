@@ -10,5 +10,6 @@ package projetocfc;
  * @author Tharles
  */
 public class automovel {
-    
+    protected instrutor Instrutor;
+implements tipo;
 }

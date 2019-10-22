@@ -9,6 +9,7 @@ package projetocfc;
  *
  * @author Tharles
  */
-public class instrutor {
+public class instrutor extends pessoa{
     
+    protected automovel auto;
 }

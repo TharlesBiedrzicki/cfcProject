@@ -9,6 +9,6 @@ package projetocfc;
  *
  * @author Tharles
  */
-public class aluno {
+public class aluno extends pessoa{
     
 }

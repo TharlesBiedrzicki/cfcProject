@@ -9,6 +9,6 @@ package projetocfc;
  *
  * @author Tharles
  */
-public class carro {
+public class carro extends automovel{
     
 }
