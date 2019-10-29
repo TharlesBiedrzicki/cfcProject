@@ -10,8 +10,8 @@ package projetocfc;
  * @author Tharles
  */
 public class pessoa {
-    private String nome;
-    private String nascimento;
-    private String RG;
+    protected String nome;
+    protected String nascimento;
+    protected String CPF;
     
 }

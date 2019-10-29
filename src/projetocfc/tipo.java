@@ -9,6 +9,11 @@ package projetocfc;
  *
  * @author Tharles
  */
-public class tipo {
+public interface tipo {
     
+    public int pneus();
+    
+    public int cavalos();
+            
+            
 }

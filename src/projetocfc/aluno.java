@@ -10,5 +10,40 @@ package projetocfc;
  * @author Tharles
  */
 public class aluno extends pessoa{
+    private String catHab;
+
+    public String getCatHab() {
+        return catHab;
+    }
+
+    public void setCatHab(String catHab) {
+        this.catHab = catHab;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNascimento() {
+        return nascimento;
+    }
+
+    public void setNascimento(String nascimento) {
+        this.nascimento = nascimento;
+    }
+
+    public String getCPF() {
+        return CPF;
+    }
+
+    public void setCPF(String CPF) {
+        this.CPF = CPF;
+    }
+    
+    
     
 }
