@@ -43,6 +43,22 @@ public class atendente extends pessoa{
     public void setCPF(String CPF) {
         this.CPF = CPF;
     }
+        public endereço getEndereço() {
+        return endereço;
+    }
+
+    public void setEndereço(endereço endereço) {
+        this.endereço = endereço;
+    }
     
+      public void exibirDados(){
+      
+  }  
     
+    public void cadastrar(){
+      
+  } 
+     public void remover(){
+      
+  } 
 }
