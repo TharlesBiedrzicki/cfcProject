@@ -12,7 +12,19 @@ package projetocfc;
 public class instrutor extends pessoa{
     private String id;
     protected automovel auto;
-
+ 
+    public instrutor(String id,String nome, String cpf, String nascimento) {
+        this.id = id;
+        this.nome = nome;
+        this.CPF = cpf;
+        this.nascimento = nascimento;    
+    }
+   public instrutor() {
+        this.id = "";
+        this.nome = "";
+        this.CPF = "";
+        this.nascimento = "";    
+    }
     public String getId() {
         return id;
     }
@@ -52,22 +64,19 @@ public class instrutor extends pessoa{
     public void setCPF(String CPF) {
         this.CPF = CPF;
     }
-        public endereço getEndereço() {
-        return endereço;
+
+    public endereço[] getEndereço() {
+        return Endereço;
     }
 
-    public void setEndereço(endereço endereço) {
-        this.endereço = endereço;
+    public void setEndereço(endereço[] Endereço) {
+        this.Endereço = Endereço;
     }
     
   public void exibirDados(){
-      
+      System.out.println("nome: "+ this.getNome());
+      System.out.println("codigo identificação: "+ this.getId());
+      System.out.println("placa carro associado: "+this.auto.getPlaca());
   }  
     
-    public void cadastrar(){
-      
-  } 
-     public void remover(){
-      
-  } 
 }

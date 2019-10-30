@@ -11,6 +11,13 @@ package projetocfc;
  */
 public class aluno extends pessoa{
     private String catHab;
+    
+       public aluno(String catHab,String nome, String cpf, String nascimento) {
+        this.catHab = catHab;
+        this.nome = nome;
+        this.CPF = cpf;
+        this.nascimento = nascimento;
+        }
 
     public String getCatHab() {
         return catHab;
@@ -43,23 +50,19 @@ public class aluno extends pessoa{
     public void setCPF(String CPF) {
         this.CPF = CPF;
     }
-        public endereço getEndereço() {
-        return endereço;
+    
+        public endereço[] getEndereço() {
+        return Endereço;
     }
 
-    public void setEndereço(endereço endereço) {
-        this.endereço = endereço;
+    public void setEndereço(endereço[] Endereço) {
+        this.Endereço = Endereço;
     }
     
      public void exibirDados(){
-      
-  }  
-    
-    public void cadastrar(){
-      
-  } 
-     public void remover(){
-      
+         System.out.println("nome: "+this.getNome());
+         System.out.println("categoria Habilitação: "+this.getCatHab());
+         System.out.println("nascimento: "+this.getNascimento());
   }  
     
 }

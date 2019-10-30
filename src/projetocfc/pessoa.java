@@ -13,7 +13,7 @@ public abstract class pessoa {
     protected String nome;
     protected String nascimento;
     protected String CPF;
-    protected endereço endereço;
+    protected endereço Endereço[];
 
     public String getNome() {
         return nome;
@@ -38,17 +38,15 @@ public abstract class pessoa {
     public void setCPF(String CPF) {
         this.CPF = CPF;
     }
-
-    public endereço getEndereço() {
-        return endereço;
+    public endereço[] getEndereço() {
+        return Endereço;
     }
 
-    public void setEndereço(endereço endereço) {
-        this.endereço = endereço;
+    public void setEndereço(endereço[] Endereço) {
+        this.Endereço = Endereço;
     }
-
+    
     public abstract void exibirDados();
-    public abstract void cadastrar();
-    public abstract void remover();
+
     
 }

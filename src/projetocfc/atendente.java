@@ -12,6 +12,13 @@ package projetocfc;
 public class atendente extends pessoa{
     private String turno;
 
+        public atendente(String turno,String nome, String cpf, String nascimento) {
+        this.turno = turno;
+        this.nome = nome;
+        this.CPF = cpf;
+        this.nascimento = nascimento;
+        }
+        
     public String getTurno() {
         return turno;
     }
@@ -43,22 +50,18 @@ public class atendente extends pessoa{
     public void setCPF(String CPF) {
         this.CPF = CPF;
     }
-        public endereço getEndereço() {
-        return endereço;
+    
+        public endereço[] getEndereço() {
+        return Endereço;
     }
 
-    public void setEndereço(endereço endereço) {
-        this.endereço = endereço;
+    public void setEndereço(endereço[] Endereço) {
+        this.Endereço = Endereço;
     }
     
       public void exibirDados(){
-      
-  }  
-    
-    public void cadastrar(){
-      
-  } 
-     public void remover(){
-      
-  } 
+          System.out.println("nome: "+ this.getNome());
+          System.out.println("turno: "+this.getTurno());
+      }  
+  
 }
