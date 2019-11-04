@@ -15,7 +15,11 @@ public class ProjetoCFC {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+    
+        aluno Aluno = new aluno("AB","JOAO","1234656789","10/8/99");
+        
+        
+        System.out.println("dados: "+ Aluno.getNome());
     }
     
 }

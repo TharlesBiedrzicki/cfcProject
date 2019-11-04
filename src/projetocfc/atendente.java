@@ -11,12 +11,17 @@ package projetocfc;
  */
 public class atendente extends pessoa{
     private String turno;
+    private int codAtendente;
 
-        public atendente(String turno,String nome, String cpf, String nascimento) {
-        this.turno = turno;
-        this.nome = nome;
-        this.CPF = cpf;
-        this.nascimento = nascimento;
+        public atendente(){
+        this.codAtendente= 0;
+        this.turno="";
+        
+    }
+        public atendente(String nome, String cpf, String nascimento, String turno, int codAtendente) {
+       super(nome, cpf, nascimento);
+            this.turno = turno;
+            this.codAtendente= codAtendente;
         }
         
     public String getTurno() {
@@ -27,41 +32,20 @@ public class atendente extends pessoa{
         this.turno = turno;
     }
 
-    public String getNome() {
-        return nome;
+    public int getCodAtendente() {
+        return codAtendente;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setCodAtendente(int codAtendente) {
+        this.codAtendente = codAtendente;
     }
 
-    public String getNascimento() {
-        return nascimento;
-    }
 
-    public void setNascimento(String nascimento) {
-        this.nascimento = nascimento;
-    }
-
-    public String getCPF() {
-        return CPF;
-    }
-
-    public void setCPF(String CPF) {
-        this.CPF = CPF;
-    }
-    
-        public endereço[] getEndereço() {
-        return Endereço;
-    }
-
-    public void setEndereço(endereço[] Endereço) {
-        this.Endereço = Endereço;
-    }
-    
+    @Override
       public void exibirDados(){
           System.out.println("nome: "+ this.getNome());
           System.out.println("turno: "+this.getTurno());
+          System.out.println("Codigo: "+this.getCodAtendente());
       }  
   
 }

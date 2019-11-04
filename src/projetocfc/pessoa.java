@@ -13,7 +13,18 @@ public abstract class pessoa {
     protected String nome;
     protected String nascimento;
     protected String CPF;
-    protected endereço Endereço[];
+    
+  public pessoa(){
+      this.nome = "";
+      this.CPF = "00.000.000-00";
+      this.nascimento = "00/00/0000";
+  }
+  
+   public pessoa(String nome, String CPF, String nascimento){
+      this.nome = nome;
+      this.CPF = CPF;
+      this.nascimento = nascimento;
+  }
 
     public String getNome() {
         return nome;
@@ -37,13 +48,6 @@ public abstract class pessoa {
 
     public void setCPF(String CPF) {
         this.CPF = CPF;
-    }
-    public endereço[] getEndereço() {
-        return Endereço;
-    }
-
-    public void setEndereço(endereço[] Endereço) {
-        this.Endereço = Endereço;
     }
     
     public abstract void exibirDados();

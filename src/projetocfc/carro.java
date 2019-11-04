@@ -13,6 +13,21 @@ public class carro extends automovel{
     
     private int portas;
 
+    public carro(){
+        this.portas=0;
+    }
+    
+    public carro(String placa, String modelo, String cor,int numPortas, int numCavalos, int numPneus){
+        super(placa,modelo,cor,numPneus,numCavalos);
+        this.portas=numPortas;
+    }
+    
+    @Override
+    public void exibirDados(){
+        super.exibirDados();
+        System.out.println("Numero de Portas: " + this.portas);
+}
+    
     public int getPortas() {
         return portas;
     }

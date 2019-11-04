@@ -11,9 +11,7 @@ package projetocfc;
  */
 public interface tipo {
     
-    public int pneus();
-    
-    public int cavalos();
-            
+   void NumPneus(int numPneus);
+   void NumCV(int numCV);
             
 }

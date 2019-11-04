@@ -10,11 +10,30 @@ package projetocfc;
  * @author Tharles
  */
 public class automovel implements tipo {
+
     protected instrutor Instrutor;
-    
     public String placa;
     public String cor;
     public String modelo;
+    public int cavalos;
+    public int pneus;
+
+       
+     public automovel(String placa, String cor, String modelo, int numCavalos, int numPneus) {
+        this.placa = placa;
+        this.cor = cor;
+        this.modelo = modelo;
+          this.cavalos=numCavalos;
+        this.pneus=numPneus;
+    }
+     public automovel() {
+        this.placa = "";
+        this.cor = "";
+        this.modelo = "";
+        this.cavalos=0;
+        this.pneus=0;
+
+     }
 
     public instrutor getInstrutor() {
         return Instrutor;
@@ -48,33 +67,22 @@ public class automovel implements tipo {
         this.modelo = modelo;
     }
     
-    public int cavalos(){
-        return 1;
-    }
-    
-      
-    public int pneus(){
-        return 1;
+    @Override
+    public void NumPneus(int numPneus) {
+        System.out.println("Número de Pneus : "+numPneus);
     }
 
-   
-     public automovel(String placa, String cor, String modelo) {
-        this.placa = placa;
-        this.cor = cor;
-        this.modelo = modelo;
+    @Override
+    public void NumCV(int numCavalos) {
+        System.out.println("Número de Cavalos : "+numCavalos);
     }
-     public automovel() {
-        this.placa = "";
-        this.cor = "";
-        this.modelo = "";
+    
+    public void exibirDados(){
+        System.out.println("Modelo: "+ this.modelo);
+        System.out.println("Placa: "+ this.placa);
+        System.out.println("Cor: "+ this.cor);
+        NumCV(this.cavalos);
+        NumPneus(this.pneus);
     }
- 
-    public int numPneus(){
-        return 1;
-    }
-  
-    public int numCavalos(){
-        return 1;
-    }    
     }
 

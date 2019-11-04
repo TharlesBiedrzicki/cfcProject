@@ -10,27 +10,22 @@ package projetocfc;
  * @author Tharles
  */
 public class instrutor extends pessoa{
-    private String id;
+    private String codID;
     protected automovel auto;
  
-    public instrutor(String id,String nome, String cpf, String nascimento) {
-        this.id = id;
-        this.nome = nome;
-        this.CPF = cpf;
-        this.nascimento = nascimento;    
+    public instrutor(String nome, String cpf, String nascimento, String codID) {
+     super(nome, cpf, nascimento);
+        this.codID = codID;  
     }
    public instrutor() {
-        this.id = "";
-        this.nome = "";
-        this.CPF = "";
-        this.nascimento = "";    
+        this.codID = "";
     }
     public String getId() {
-        return id;
+        return codID;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setId(String codID) {
+        this.codID = codID;
     }
 
     public automovel getAuto() {
@@ -41,38 +36,7 @@ public class instrutor extends pessoa{
         this.auto = auto;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getNascimento() {
-        return nascimento;
-    }
-
-    public void setNascimento(String nascimento) {
-        this.nascimento = nascimento;
-    }
-
-    public String getCPF() {
-        return CPF;
-    }
-
-    public void setCPF(String CPF) {
-        this.CPF = CPF;
-    }
-
-    public endereço[] getEndereço() {
-        return Endereço;
-    }
-
-    public void setEndereço(endereço[] Endereço) {
-        this.Endereço = Endereço;
-    }
-    
+@Override
   public void exibirDados(){
       System.out.println("nome: "+ this.getNome());
       System.out.println("codigo identificação: "+ this.getId());
