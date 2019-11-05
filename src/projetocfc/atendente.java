@@ -18,8 +18,8 @@ public class atendente extends pessoa{
         this.turno="";
         
     }
-        public atendente(String nome, String cpf, String nascimento, String turno, int codAtendente) {
-       super(nome, cpf, nascimento);
+        public atendente(String nome, String cpf, String nascimento, String turno, int codAtendente, endereço end) {
+       super(nome, cpf, nascimento, end );
             this.turno = turno;
             this.codAtendente= codAtendente;
         }
@@ -46,6 +46,7 @@ public class atendente extends pessoa{
           System.out.println("nome: "+ this.getNome());
           System.out.println("turno: "+this.getTurno());
           System.out.println("Codigo: "+this.getCodAtendente());
+          System.out.println(end.toString());
       }  
   
 }

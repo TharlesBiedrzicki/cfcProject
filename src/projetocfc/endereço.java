@@ -62,6 +62,9 @@ private String estado;
         this.estado = estado;
     }
     
-
+  public String toString(){
+        return ("Rua: "+ this.getLogradouro()+" numero: "+this.getNumero()+" cidade: "+ this.getCidade());
+     
+  }  
 }
 

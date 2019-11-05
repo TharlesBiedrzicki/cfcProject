@@ -11,7 +11,7 @@ package projetocfc;
  */
 public class automovel implements tipo {
 
-    protected instrutor Instrutor;
+     protected instrutor Instrutor;
     public String placa;
     public String cor;
     public String modelo;

@@ -13,8 +13,8 @@ public class instrutor extends pessoa{
     private String codID;
     protected automovel auto;
  
-    public instrutor(String nome, String cpf, String nascimento, String codID) {
-     super(nome, cpf, nascimento);
+    public instrutor(String nome, String cpf, String nascimento, String codID, endereço end) {
+     super(nome, cpf, nascimento,end);
         this.codID = codID;  
     }
    public instrutor() {
@@ -41,6 +41,7 @@ public class instrutor extends pessoa{
       System.out.println("nome: "+ this.getNome());
       System.out.println("codigo identificação: "+ this.getId());
       System.out.println("placa carro associado: "+this.auto.getPlaca());
+      System.out.println(end.toString());
   }  
     
 }

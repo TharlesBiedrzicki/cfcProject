@@ -15,8 +15,8 @@ public class aluno extends pessoa{
      public aluno(){
         this.catHab = "";
     }
-       public aluno(String nome, String cpf, String nascimento, String catHab) {
-        super(nome, cpf, nascimento);
+       public aluno(String nome, String cpf, String nascimento, String catHab, endereço end) {
+        super(nome, cpf, nascimento, end);
          this.catHab = catHab;
        }
        
@@ -34,6 +34,7 @@ public class aluno extends pessoa{
          System.out.println("nome: "+this.getNome());
          System.out.println("categoria Habilitação: "+this.getCatHab());
          System.out.println("nascimento: "+this.getNascimento());
+         System.out.println(end.toString());
   }  
     
 }
