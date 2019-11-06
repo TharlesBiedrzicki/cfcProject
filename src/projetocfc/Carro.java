@@ -9,16 +9,16 @@ package projetocfc;
  *
  * @author Tharles
  */
-public class carro extends automovel{
+public class Carro extends Automovel{
     
     private int portas;
    
-    public carro(){
+    public Carro(){
         this.portas=0;
     }
     
-    public carro(String placa, String modelo, String cor,int numPortas, int numCavalos, int numPneus){
-        super(placa,modelo,cor,numPneus,numCavalos);
+    public Carro(String placa, String modelo, String cor, int numCavalos, int numPneus, int numPortas){
+        super(modelo,cor,placa,numPneus,numCavalos);
         this.portas=numPortas;
     }
     
@@ -36,11 +36,11 @@ public class carro extends automovel{
         this.portas = portas;
     }
 
-    public instrutor getInstrutor() {
+    public Instrutor getInstrutor() {
         return Instrutor;
     }
 
-    public void setInstrutor(instrutor Instrutor) {
+    public void setInstrutor(Instrutor Instrutor) {
         this.Instrutor = Instrutor;
     }  
 }

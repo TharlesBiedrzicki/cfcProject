@@ -1,5 +1,8 @@
 package projetocfc;
 
+import java.util.Scanner;
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,20 +13,20 @@ package projetocfc;
  *
  * @author Tharles
  */
-public class endereço {
+public class Endereco {
 private String logradouro;
 private int numero;
 private String cidade;
 private String estado;
 
-    public endereço(String logradouro, int numero, String cidade, String estado) {
+    public Endereco(String logradouro, int numero, String cidade, String estado) {
         this.logradouro = logradouro;
         this.numero = numero;
         this.cidade = cidade;
         this.estado = estado;
     }
     
-    public endereço() {
+    public Endereco() {
         this.logradouro = "";
         this.numero = 0;
         this.cidade ="";
@@ -66,5 +69,20 @@ private String estado;
         return ("Rua: "+ this.getLogradouro()+" numero: "+this.getNumero()+" cidade: "+ this.getCidade());
      
   }  
+
+ 
+  public void inserir(){
+       Scanner dados = new Scanner(System.in);
+      System.out.println("rua: ");
+      String rua = dados.next();
+      System.out.println("numero: ");
+      int num= dados.nextInt();
+      System.out.println("cidade: ");
+      String city = dados.next();
+      System.out.println("estado: ");
+      String state = dados.next();
+      Endereco end = new Endereco(rua, num, city, state );
+  }
+
 }
 

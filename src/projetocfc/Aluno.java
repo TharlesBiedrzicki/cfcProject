@@ -5,17 +5,19 @@
  */
 package projetocfc;
 
+
+
 /**
  *
  * @author Tharles
  */
-public class aluno extends pessoa{
+public class Aluno extends Pessoa{
     private String catHab;
     
-     public aluno(){
+     public Aluno(){
         this.catHab = "";
     }
-       public aluno(String nome, String cpf, String nascimento, String catHab, endereço end) {
+       public Aluno(String nome, String cpf, String nascimento, String catHab, Endereco end) {
         super(nome, cpf, nascimento, end);
          this.catHab = catHab;
        }
@@ -35,6 +37,19 @@ public class aluno extends pessoa{
          System.out.println("categoria Habilitação: "+this.getCatHab());
          System.out.println("nascimento: "+this.getNascimento());
          System.out.println(end.toString());
-  }  
-    
+  } 
+     /**
+     Scanner dados = new Scanner(System.in);
+    public void inserir(){
+        System.out.println("nome: ");
+       String Nome = dados.next();
+        System.out.println("CPF: ");
+        String Cpf = dados.next();
+        System.out.println("Nascimento(xx/xx/xxxx): ");
+        String Nascimento = dados.next();
+        System.out.println("categoria hablitação: ");
+        String CatHab = dados.next();
+        end.inserir();
+    }
+    **/
 }

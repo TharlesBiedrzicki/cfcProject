@@ -9,15 +9,15 @@ package projetocfc;
  *
  * @author Tharles
  */
-public class moto extends automovel {
+public class Moto extends Automovel {
     private int numCilindradas;
 
-        public moto(){
+        public Moto(){
         this.numCilindradas=0;
     }
     
-    public moto(String cor, String modelo, String placa, int numPneus,int numCavalos, int numCilindradas){
-        super(cor,modelo,placa,numPneus,numCavalos);
+    public Moto(String cor, String modelo, String placa, int numPneus,int numCavalos, int numCilindradas){
+        super(modelo,cor,placa,numPneus,numCavalos);
         this.numCilindradas=numCilindradas;
     }
     

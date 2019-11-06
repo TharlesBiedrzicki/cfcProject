@@ -9,9 +9,9 @@ package projetocfc;
  *
  * @author Tharles
  */
-public class automovel implements tipo {
+public class Automovel implements tipo {
 
-     protected instrutor Instrutor;
+    protected Instrutor Instrutor;
     public String placa;
     public String cor;
     public String modelo;
@@ -19,14 +19,14 @@ public class automovel implements tipo {
     public int pneus;
 
        
-     public automovel(String placa, String cor, String modelo, int numCavalos, int numPneus) {
+     public Automovel(String placa, String cor, String modelo, int numCavalos, int numPneus) {
         this.placa = placa;
         this.cor = cor;
         this.modelo = modelo;
           this.cavalos=numCavalos;
         this.pneus=numPneus;
     }
-     public automovel() {
+     public Automovel() {
         this.placa = "";
         this.cor = "";
         this.modelo = "";
@@ -35,11 +35,11 @@ public class automovel implements tipo {
 
      }
 
-    public instrutor getInstrutor() {
+    public Instrutor getInstrutor() {
         return Instrutor;
     }
 
-    public void setInstrutor(instrutor Instrutor) {
+    public void setInstrutor(Instrutor Instrutor) {
         this.Instrutor = Instrutor;
     }
 

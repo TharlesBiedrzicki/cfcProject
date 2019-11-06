@@ -9,20 +9,20 @@ package projetocfc;
  *
  * @author Tharles
  */
-public abstract class pessoa {
+public abstract class Pessoa {
     protected String nome;
     protected String nascimento;
     protected String CPF;
-    protected endereço end;
+    protected Endereco end;
     
-  public pessoa(){
+  public Pessoa(){
       this.nome = "";
       this.CPF = "00.000.000-00";
       this.nascimento = "00/00/0000";
       this.end = null ;
   }
   
-   public pessoa(String nome, String CPF, String nascimento, endereço end){
+   public Pessoa(String nome, String CPF, String nascimento, Endereco end){
       this.nome = nome;
       this.CPF = CPF;
       this.nascimento = nascimento;

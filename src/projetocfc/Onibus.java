@@ -9,15 +9,15 @@ package projetocfc;
  *
  * @author Tharles
  */
-public class onibus extends automovel{
+public class Onibus extends Automovel{
     private int lugares;
     
-    public onibus(){
+    public Onibus(){
         this.lugares=0;
     }
     
-    public onibus(String placa, String modelo, String cor,int codOnibus,int numCavalos, int numPneus, int lugares){
-    super(cor,modelo,placa,numPneus,numCavalos);
+    public Onibus(String placa, String modelo, String cor,int numCavalos, int numPneus, int lugares){
+    super(modelo,cor,placa,numPneus,numCavalos);
     this.lugares=lugares;
     }
     

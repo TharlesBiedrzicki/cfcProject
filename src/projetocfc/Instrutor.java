@@ -9,15 +9,16 @@ package projetocfc;
  *
  * @author Tharles
  */
-public class instrutor extends pessoa{
+public class Instrutor extends Pessoa{
     private String codID;
-    protected automovel auto;
+    protected Automovel auto;
  
-    public instrutor(String nome, String cpf, String nascimento, String codID, endereço end) {
+    public Instrutor(String nome, String cpf, String nascimento, String codID, Endereco end, Automovel auto) {
      super(nome, cpf, nascimento,end);
+     this.auto = auto;
         this.codID = codID;  
     }
-   public instrutor() {
+   public Instrutor() {
         this.codID = "";
     }
     public String getId() {
@@ -28,11 +29,11 @@ public class instrutor extends pessoa{
         this.codID = codID;
     }
 
-    public automovel getAuto() {
+    public Automovel getAuto() {
         return auto;
     }
 
-    public void setAuto(automovel auto) {
+    public void setAuto(Automovel auto) {
         this.auto = auto;
     }
 

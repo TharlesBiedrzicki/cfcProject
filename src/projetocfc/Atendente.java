@@ -9,16 +9,16 @@ package projetocfc;
  *
  * @author Tharles
  */
-public class atendente extends pessoa{
+public class Atendente extends Pessoa{
     private String turno;
     private int codAtendente;
 
-        public atendente(){
+        public Atendente(){
         this.codAtendente= 0;
         this.turno="";
         
     }
-        public atendente(String nome, String cpf, String nascimento, String turno, int codAtendente, endereço end) {
+        public Atendente(String nome, String cpf, String nascimento, String turno, int codAtendente, Endereco end) {
        super(nome, cpf, nascimento, end );
             this.turno = turno;
             this.codAtendente= codAtendente;
