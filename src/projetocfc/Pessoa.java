@@ -10,6 +10,7 @@ package projetocfc;
  * @author Tharles
  */
 public abstract class Pessoa {
+    protected String flag;
     protected String nome;
     protected String nascimento;
     protected String CPF;
@@ -22,7 +23,8 @@ public abstract class Pessoa {
       this.end = null ;
   }
   
-   public Pessoa(String nome, String CPF, String nascimento, Endereco end){
+   public Pessoa(String flag, String nome, String CPF, String nascimento, Endereco end){
+       this.flag = flag;
       this.nome = nome;
       this.CPF = CPF;
       this.nascimento = nascimento;

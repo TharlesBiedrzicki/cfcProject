@@ -13,8 +13,8 @@ public class Instrutor extends Pessoa{
     private String codID;
     protected Automovel auto;
  
-    public Instrutor(String nome, String cpf, String nascimento, String codID, Endereco end, Automovel auto) {
-     super(nome, cpf, nascimento,end);
+    public Instrutor(String flag, String nome, String cpf, String nascimento, String codID, Endereco end, Automovel auto) {
+     super(flag, nome, cpf, nascimento,end);
      this.auto = auto;
         this.codID = codID;  
     }

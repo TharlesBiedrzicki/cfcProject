@@ -17,8 +17,8 @@ public class Aluno extends Pessoa{
      public Aluno(){
         this.catHab = "";
     }
-       public Aluno(String nome, String cpf, String nascimento, String catHab, Endereco end) {
-        super(nome, cpf, nascimento, end);
+       public Aluno(String flag,String nome, String cpf, String nascimento, String catHab, Endereco end) {
+        super(flag, nome, cpf, nascimento, end);
          this.catHab = catHab;
        }
        

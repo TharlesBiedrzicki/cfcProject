@@ -18,8 +18,8 @@ public class Atendente extends Pessoa{
         this.turno="";
         
     }
-        public Atendente(String nome, String cpf, String nascimento, String turno, int codAtendente, Endereco end) {
-       super(nome, cpf, nascimento, end );
+        public Atendente(String flag,String nome, String cpf, String nascimento, String turno, int codAtendente, Endereco end) {
+       super(flag, nome, cpf, nascimento, end );
             this.turno = turno;
             this.codAtendente= codAtendente;
         }
