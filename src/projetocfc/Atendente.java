@@ -46,7 +46,7 @@ public class Atendente extends Pessoa{
           System.out.println("nome: "+ this.getNome());
           System.out.println("turno: "+this.getTurno());
           System.out.println("Codigo: "+this.getCodAtendente());
-          System.out.println(end.toString());
+          System.out.println(this.end.toString());
       }  
   
 }

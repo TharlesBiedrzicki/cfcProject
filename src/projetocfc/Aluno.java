@@ -5,6 +5,8 @@
  */
 package projetocfc;
 
+import java.util.Scanner;
+
 
 
 /**
@@ -36,20 +38,22 @@ public class Aluno extends Pessoa{
          System.out.println("nome: "+this.getNome());
          System.out.println("categoria Habilitação: "+this.getCatHab());
          System.out.println("nascimento: "+this.getNascimento());
-         System.out.println(end.toString());
+         System.out.println(this.end.toString());
   } 
-     /**
+     
      Scanner dados = new Scanner(System.in);
     public void inserir(){
+        this.flag = "aluno";
         System.out.println("nome: ");
-       String Nome = dados.next();
+       this.nome = dados.next();
         System.out.println("CPF: ");
-        String Cpf = dados.next();
+        this.CPF = dados.next();
         System.out.println("Nascimento(xx/xx/xxxx): ");
-        String Nascimento = dados.next();
+        this.nascimento = dados.next();
         System.out.println("categoria hablitação: ");
-        String CatHab = dados.next();
-        end.inserir();
+        this.catHab = dados.next();
+        Endereco endereco = new Endereco();
+        endereco.inserir();
     }
-    **/
+    
 }

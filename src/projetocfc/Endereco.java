@@ -65,7 +65,7 @@ private String estado;
         this.estado = estado;
     }
     
-@Override
+
   public String toString(){
         return ("Rua: "+ this.getLogradouro()+" numero: "+this.getNumero()+" cidade: "+ this.getCidade());
      
@@ -76,14 +76,14 @@ private String estado;
        Scanner dados = new Scanner(System.in);
        System.out.println("#ENDEREÇO#");
       System.out.println("rua: ");
-      String rua = dados.next();
+      this.logradouro = dados.next();
+      dados.next();
       System.out.println("numero: ");
-      int num = dados.nextInt();
+      this.numero = dados.nextInt();
       System.out.println("cidade: ");
-      String city = dados.next();
+      this.cidade = dados.next();
       System.out.println("estado: ");
-      String state = dados.next();
-      Endereco end = new Endereco(rua, num, city, state );
+      this.estado = dados.next();
       System.out.println("---------------------");
   }
 

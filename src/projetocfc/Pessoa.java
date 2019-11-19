@@ -54,6 +54,22 @@ public abstract class Pessoa {
     public void setCPF(String CPF) {
         this.CPF = CPF;
     }
+
+    public String getFlag() {
+        return flag;
+    }
+
+    public void setFlag(String flag) {
+        this.flag = flag;
+    }
+
+    public Endereco getEnd() {
+        return end;
+    }
+
+    public void setEnd(Endereco end) {
+        this.end = end;
+    }
     
     public abstract void exibirDados();
 

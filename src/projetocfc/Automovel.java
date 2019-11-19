@@ -12,11 +12,11 @@ package projetocfc;
 public class Automovel implements tipo {
 
     protected Instrutor Instrutor;
-    public String placa;
-    public String cor;
-    public String modelo;
-    public int cavalos;
-    public int pneus;
+    String placa;
+    private String cor;
+    private String modelo;
+    private int cavalos;
+    private int pneus;
 
        
      public Automovel(String placa, String cor, String modelo, int numCavalos, int numPneus) {

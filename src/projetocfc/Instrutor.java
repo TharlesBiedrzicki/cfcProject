@@ -16,7 +16,7 @@ public class Instrutor extends Pessoa{
     public Instrutor(String flag, String nome, String cpf, String nascimento, String codID, Endereco end, Automovel auto) {
      super(flag, nome, cpf, nascimento,end);
      this.auto = auto;
-        this.codID = codID;  
+     this.codID = codID;  
     }
    public Instrutor() {
         this.codID = "";
@@ -42,7 +42,8 @@ public class Instrutor extends Pessoa{
       System.out.println("nome: "+ this.getNome());
       System.out.println("codigo identificação: "+ this.getId());
       System.out.println("placa carro associado: "+this.auto.getPlaca());
-      System.out.println(end.toString());
+      System.out.println("modelo: "+ this.auto.getModelo());
+      System.out.println(this.end.toString());
   }  
     
 }

@@ -121,7 +121,6 @@ public class ProjetoCFC {
                             String CatHab = dados.next();
                             Aluno aluno = new Aluno(flag, Nome, Cpf, Nascimento, CatHab, end);
                             VectPerson.add(aluno);
-
                             break;
                     }
                 case 3:
@@ -129,58 +128,60 @@ public class ProjetoCFC {
                     if (VectCar.isEmpty() == true) {
                         System.out.println("nenhum veiculo cadastrado");
                     } else {
-                        for (Automovel vector : VectCar) {
+                        VectCar.stream().map((vector) -> {
                             vector.exibirDados();
+                            return vector;
+                        }).forEachOrdered((_item) -> {
                             System.out.println("------------");
-                        }
+                        });
                     }
                     break;
                 case 4:
-                    System.out.println("1-INSTRUTOR");
-                    System.out.println("2-ATENDENTE");
-                    System.out.println("3-ALUNO");
+                    /**
+                     * if (VectPerson.isEmpty() == true) {
+                     * System.out.println("nenhuma pessoa cadastrada"); } else {
+                     * for (Pessoa vector : VectPerson) { vector.exibirDados();
+                     * System.out.println("------------"); }
+                    *
+                     */
+
+                    System.out.println("1-LISTAR INSTRUTOR");
+                    System.out.println("2-LISTAR ATENDENTE");
+                    System.out.println("3-LISTAR ALUNO");
                     int m = dados.nextInt();
 
                     switch (m) {
-                        
+
                         case 1:
-                            int a = 0;
                             for (Pessoa vector : VectPerson) {
-                                if (vector.flag == "instrutor") {
+                                if ("instrutor".equals(vector.getFlag())) {
                                     vector.exibirDados();
                                     System.out.println("------------");
-                                    a = 1;
-                                     }
-                                if(a==0){
-                                    System.out.println("nenhum instrutor cadastrado!");
                                 }
                             }
+                            
                             break;
 
                         case 2:
-                            for (Pessoa vector : VectPerson) {
-                                if (vector.flag == "atendente") {
+                            VectPerson.forEach((vector) -> {
+                                if ("atendente".equals(vector.getFlag())) {
                                     vector.exibirDados();
                                     System.out.println("------------");
-                                }else{
-                                    System.out.println("nenhum atendente cadastrado!");
-                                }
-                            }
+                                } 
+                            });
                             break;
 
                         case 3:
-                            for (Pessoa vector : VectPerson) {
-                                if (vector.flag == "aluno") {
+                            VectPerson.forEach((vector) -> {
+                                if ("aluno".equals(vector.getFlag())) {
                                     vector.exibirDados();
                                     System.out.println("------------");
-                                     }else{
-                                    System.out.println("nenhum aluno cadastrado!");
-                                }                            }
+                                } 
+                            });
                             break;
 
                     }
             }
-
         } while (i != 0);
     }
 }
