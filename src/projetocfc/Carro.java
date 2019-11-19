@@ -11,25 +11,26 @@ import java.util.Scanner;
  *
  * @author Tharles
  */
-public class Carro extends Automovel{
-    
+public class Carro extends Automovel {
+
     private int portas;
-   Scanner dados =new Scanner(System.in);
-    public Carro(){
-        this.portas=0;
+    Scanner dados = new Scanner(System.in);
+
+    public Carro() {
+        this.portas = 0;
     }
-    
-    public Carro(String placa, String modelo, String cor, int numCavalos, int numPneus, int numPortas){
-        super(modelo,cor,placa,numPneus,numCavalos);
-        this.portas=numPortas;
+
+    public Carro(String placa, String modelo, String cor, int numCavalos, int numPneus, int numPortas) {
+        super(modelo, cor, placa, numPneus, numCavalos);
+        this.portas = numPortas;
     }
-    
+
     @Override
-    public void exibirDados(){
+    public void exibirDados() {
         super.exibirDados();
         System.out.println("Numero de Portas: " + this.portas);
-}
-    
+    }
+
     public int getPortas() {
         return portas;
     }
@@ -44,15 +45,15 @@ public class Carro extends Automovel{
 
     public void setInstrutor(Instrutor Instrutor) {
         this.Instrutor = Instrutor;
-    }  
-    
+    }
+
     @Override
     public Carro inserir() {
         Automovel automovel = super.inserir();
         System.out.print("Digite o numero de portas: ");
         int numPortas = dados.nextInt();
-        Carro carro = new Carro( automovel.modelo, automovel.cor, automovel.placa,automovel.getCavalos(),automovel.getPneus(), numPortas );
-        
+        Carro carro = new Carro(automovel.modelo, automovel.cor, automovel.placa, automovel.getCavalos(), automovel.getPneus(), numPortas);
+
         return carro;
     }
 }

@@ -10,26 +10,27 @@ package projetocfc;
  * @author Tharles
  */
 public abstract class Pessoa {
+
     protected String flag;
     protected String nome;
     protected String nascimento;
     protected String CPF;
     protected Endereco end;
-    
-  public Pessoa(){
-      this.nome = "";
-      this.CPF = "00.000.000-00";
-      this.nascimento = "00/00/0000";
-      this.end = null ;
-  }
-  
-   public Pessoa(String flag, String nome, String CPF, String nascimento, Endereco end){
-       this.flag = flag;
-      this.nome = nome;
-      this.CPF = CPF;
-      this.nascimento = nascimento;
-      this.end = end;
-  }
+
+    public Pessoa() {
+        this.nome = "";
+        this.CPF = "00.000.000-00";
+        this.nascimento = "00/00/0000";
+        this.end = null;
+    }
+
+    public Pessoa(String flag, String nome, String CPF, String nascimento, Endereco end) {
+        this.flag = flag;
+        this.nome = nome;
+        this.CPF = CPF;
+        this.nascimento = nascimento;
+        this.end = end;
+    }
 
     public String getNome() {
         return nome;
@@ -70,8 +71,7 @@ public abstract class Pessoa {
     public void setEnd(Endereco end) {
         this.end = end;
     }
-    
+
     public abstract void exibirDados();
 
-    
 }

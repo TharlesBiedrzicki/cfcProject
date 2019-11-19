@@ -8,16 +8,16 @@ import java.util.Scanner;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Tharles
  */
 public class Endereco {
-private String logradouro;
-private int numero;
-private String cidade;
-private String estado;
+
+    private String logradouro;
+    private int numero;
+    private String cidade;
+    private String estado;
 
     public Endereco(String logradouro, int numero, String cidade, String estado) {
         this.logradouro = logradouro;
@@ -25,11 +25,11 @@ private String estado;
         this.cidade = cidade;
         this.estado = estado;
     }
-    
+
     public Endereco() {
         this.logradouro = "";
         this.numero = 0;
-        this.cidade ="";
+        this.cidade = "";
         this.estado = "";
     }
 
@@ -64,28 +64,25 @@ private String estado;
     public void setEstado(String estado) {
         this.estado = estado;
     }
-    
 
-  public String toString(){
-        return ("Rua: "+ this.getLogradouro()+" numero: "+this.getNumero()+" cidade: "+ this.getCidade());
-     
-  }  
+    public String toString() {
+        return ("Rua: " + this.getLogradouro() + " numero: " + this.getNumero() + " cidade: " + this.getCidade());
 
- 
-  public void inserir(){
-       Scanner dados = new Scanner(System.in);
-       System.out.println("#ENDEREÇO#");
-      System.out.println("rua: ");
-      this.logradouro = dados.next();
-      dados.next();
-      System.out.println("numero: ");
-      this.numero = dados.nextInt();
-      System.out.println("cidade: ");
-      this.cidade = dados.next();
-      System.out.println("estado: ");
-      this.estado = dados.next();
-      System.out.println("---------------------");
-  }
+    }
+
+    public void inserir() {
+        Scanner dados = new Scanner(System.in);
+        System.out.println("#ENDEREÇO#");
+        System.out.println("rua: ");
+        this.logradouro = dados.nextLine();
+        dados.nextLine();
+        System.out.println("numero: ");
+        this.numero = dados.nextInt();
+        System.out.println("cidade: ");
+        this.cidade = dados.next();
+        System.out.println("estado: ");
+        this.estado = dados.next();
+        System.out.println("---------------------");
+    }
 
 }
-

@@ -10,8 +10,9 @@ package projetocfc;
  * @author Tharles
  */
 public interface tipo {
-    
-   void NumPneus(int numPneus);
-   void NumCV(int numCV);
-            
+
+    void NumPneus(int numPneus);
+
+    void NumCV(int numCV);
+
 }

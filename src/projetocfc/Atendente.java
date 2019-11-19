@@ -52,10 +52,11 @@ public class Atendente extends Pessoa {
         System.out.println("Codigo: " + this.getCodAtendente());
         System.out.println(this.end.toString());
     }
-        public void inserir(){
+
+    public void inserir() {
         this.flag = "atendente";
         System.out.println("nome: ");
-       this.nome = dados.next();
+        this.nome = dados.next();
         System.out.println("CPF: ");
         this.CPF = dados.next();
         System.out.println("Nascimento(xx/xx/xxxx): ");

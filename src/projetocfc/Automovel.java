@@ -75,7 +75,8 @@ public class Automovel implements tipo {
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
-  public int getCavalos() {
+
+    public int getCavalos() {
         return cavalos;
     }
 
@@ -90,6 +91,7 @@ public class Automovel implements tipo {
     public void setPneus(int pneus) {
         this.pneus = pneus;
     }
+
     @Override
     public void NumPneus(int numPneus) {
         System.out.println("Número de Pneus : " + numPneus);
