@@ -5,6 +5,8 @@
  */
 package projetocfc;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Tharles
@@ -12,7 +14,7 @@ package projetocfc;
 public class Carro extends Automovel{
     
     private int portas;
-   
+   Scanner dados =new Scanner(System.in);
     public Carro(){
         this.portas=0;
     }
@@ -43,4 +45,14 @@ public class Carro extends Automovel{
     public void setInstrutor(Instrutor Instrutor) {
         this.Instrutor = Instrutor;
     }  
+    
+    @Override
+    public Carro inserir() {
+        Automovel automovel = super.inserir();
+        System.out.print("Digite o numero de portas: ");
+        int numPortas = dados.nextInt();
+        Carro carro = new Carro( automovel.modelo, automovel.cor, automovel.placa,automovel.getCavalos(),automovel.getPneus(), numPortas );
+        
+        return carro;
+    }
 }

@@ -34,4 +34,13 @@ public class Onibus extends Automovel{
         super.exibirDados();
         System.out.println("Numero de Passageiros: " + this.lugares);
 }
+      @Override
+    public Onibus inserir() {
+        Automovel automovel = super.inserir();
+        System.out.print("Digite o numero de lugares: ");
+        int numLugares = dados.nextInt();
+        Onibus onibus = new Onibus( automovel.modelo, automovel.cor, automovel.placa,automovel.getCavalos(),automovel.getPneus(), numLugares );
+        
+        return onibus;
+    }
 }

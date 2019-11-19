@@ -21,12 +21,6 @@ public class Moto extends Automovel {
         this.numCilindradas=numCilindradas;
     }
     
-  @Override
-    public void exibirDados(){
-        super.exibirDados();
-        System.out.println("Numero de Cilindradas: " + this.numCilindradas);
-}
-
     public int getNumCilindradas() {
         return numCilindradas;
     }
@@ -35,4 +29,18 @@ public class Moto extends Automovel {
         this.numCilindradas = numCilindradas;
     }
 
+  @Override
+    public void exibirDados(){
+        super.exibirDados();
+        System.out.println("Numero de Cilindradas: " + this.numCilindradas);
+}
+ @Override
+    public Moto inserir() {
+        Automovel automovel = super.inserir();
+        System.out.print("Digite o numero de cilindradas: ");
+        int numCC = dados.nextInt();
+        Moto moto = new Moto( automovel.modelo, automovel.cor, automovel.placa,automovel.getCavalos(),automovel.getPneus(), numCC );
+        
+        return moto;
+    }
 }

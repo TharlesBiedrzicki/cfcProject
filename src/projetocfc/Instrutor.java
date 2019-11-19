@@ -5,6 +5,9 @@
  */
 package projetocfc;
 
+import java.util.Scanner;
+import java.util.Vector;
+
 /**
  *
  * @author Tharles
@@ -12,6 +15,9 @@ package projetocfc;
 public class Instrutor extends Pessoa{
     private String codID;
     protected Automovel auto;
+       Vector<Pessoa> VectPerson = new Vector();
+    Vector<Automovel> VectCar = new Vector();
+ Scanner dados = new Scanner(System.in);
  
     public Instrutor(String flag, String nome, String cpf, String nascimento, String codID, Endereco end, Automovel auto) {
      super(flag, nome, cpf, nascimento,end);
@@ -45,5 +51,27 @@ public class Instrutor extends Pessoa{
       System.out.println("modelo: "+ this.auto.getModelo());
       System.out.println(this.end.toString());
   }  
-    
+      public void inserir(){
+        this.flag = "instrutor";
+        System.out.println("nome: ");
+       this.nome = dados.next();
+        System.out.println("CPF: ");
+        this.CPF = dados.next();
+        System.out.println("Nascimento(xx/xx/xxxx): ");
+        this.nascimento = dados.next();
+        System.out.println("Cod ID instrutor ");
+        this.codID = dados.next();
+        
+        Endereco endereco = new Endereco();
+        endereco.inserir();
+          System.out.println("Digite a placa do carro para este instrutor: ");
+                          String  placa = dados.next();
+                            for (int l = 0; l < VectCar.size(); l++) {
+                                String placaVeic = VectCar.get(l).placa;
+                                Automovel car = VectCar.get(l);
+                                if (placaVeic.equals(placa)) {
+                                    Instrutor inst = new Instrutor(flag, nome, CPF, nascimento, codID, end, car);
+                                    VectPerson.add(inst);
+                                }
+    }
 }
