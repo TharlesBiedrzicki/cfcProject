@@ -37,7 +37,7 @@ public class Aluno extends Pessoa {
         System.out.println("nome: " + this.getNome());
         System.out.println("categoria Habilitação: " + this.getCatHab());
         System.out.println("nascimento: " + this.getNascimento());
-        System.out.println(this.end.toString());
+       System.out.println(this.end.toString());
     }
 
     Scanner dados = new Scanner(System.in);
@@ -53,7 +53,7 @@ public class Aluno extends Pessoa {
         System.out.println("categoria hablitação: ");
         this.catHab = dados.next();
         Endereco endereco = new Endereco();
-        endereco.inserir();
+        this.end = endereco.inserir();
     }
 
 }

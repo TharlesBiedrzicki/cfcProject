@@ -20,8 +20,8 @@ public class Carro extends Automovel {
         this.portas = 0;
     }
 
-    public Carro(String placa, String modelo, String cor, int numCavalos, int numPneus, int numPortas) {
-        super(modelo, cor, placa, numPneus, numCavalos);
+    public Carro(String placa, String cor, String modelo, int numCavalos, int numPneus, int numPortas) {
+        super( modelo,cor, placa, numCavalos,numPneus);        
         this.portas = numPortas;
     }
 
@@ -46,13 +46,13 @@ public class Carro extends Automovel {
     public void setInstrutor(Instrutor Instrutor) {
         this.Instrutor = Instrutor;
     }
-
+    
     @Override
     public Carro inserir() {
-        Automovel automovel = super.inserir();
+        Automovel automovel =super.inserir();
         System.out.print("Digite o numero de portas: ");
         int numPortas = dados.nextInt();
-        Carro carro = new Carro(automovel.modelo, automovel.cor, automovel.placa, automovel.getCavalos(), automovel.getPneus(), numPortas);
+        Carro carro = new Carro(automovel.getModelo(), automovel.getCor(),automovel.getPlaca() , automovel.getCavalos(), automovel.getPneus(), numPortas);
 
         return carro;
     }

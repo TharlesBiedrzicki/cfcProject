@@ -41,7 +41,7 @@ public class Moto extends Automovel {
         Automovel automovel = super.inserir();
         System.out.print("Digite o numero de cilindradas: ");
         int numCC = dados.nextInt();
-        Moto moto = new Moto(automovel.modelo, automovel.cor, automovel.placa, automovel.getCavalos(), automovel.getPneus(), numCC);
+        Moto moto = new Moto( automovel.modelo, automovel.cor,automovel.placa, automovel.getCavalos(), automovel.getPneus(), numCC);
 
         return moto;
     }

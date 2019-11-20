@@ -108,6 +108,7 @@ public class Automovel implements tipo {
         System.out.println("Cor: " + this.cor);
         NumCV(this.cavalos);
         NumPneus(this.pneus);
+      
     }
 
     public Automovel inserir() {

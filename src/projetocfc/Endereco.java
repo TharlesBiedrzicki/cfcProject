@@ -70,7 +70,7 @@ public class Endereco {
 
     }
 
-    public void inserir() {
+    public Endereco inserir() {
         Scanner dados = new Scanner(System.in);
         System.out.println("#ENDEREÇO#");
         System.out.println("rua: ");
@@ -83,6 +83,8 @@ public class Endereco {
         System.out.println("estado: ");
         this.estado = dados.next();
         System.out.println("---------------------");
+        Endereco end = new Endereco(logradouro, numero, cidade, estado);
+        return end;
     }
 
 }

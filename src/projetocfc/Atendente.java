@@ -66,7 +66,7 @@ public class Atendente extends Pessoa {
         System.out.println("Cod ID atendente ");
         this.codAtendente = dados.nextInt();
         Endereco endereco = new Endereco();
-        endereco.inserir();
+        this.end=endereco.inserir();
     }
 
 }

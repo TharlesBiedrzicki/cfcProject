@@ -36,50 +36,25 @@ public class ProjetoCFC {
                     System.out.println("2-MOTO");
                     System.out.println("3-ONIBUS");
                     int j = dados.nextInt();
-                    /**
-                     * System.out.println("Modelo: "); String modelo =
-                     * dados.next(); System.out.println("Cor: "); String cor =
-                     * dados.next(); System.out.println("Placa: "); String placa
-                     * = dados.next(); System.out.println("Nº CV's: "); int CVs
-                     * = dados.nextInt(); System.out.println("Nº Pneus: "); int
-                     * pneus = dados.nextInt();
-                  *
-                     */
 
                     switch (j) {
                         case 1:
-                            /**
-                             * System.out.println("Nº portas: "); int portas =
-                             * dados.nextInt(); Carro car = new Carro(modelo,
-                             * cor, placa, CVs, pneus, portas);
-                            *
-                             */
+                            
                             Carro car = new Carro();
-                            car.inserir();
-                            VectCar.add(car);
+                            Carro carro = car.inserir();
+                            VectCar.add(carro);
                             break;
                         case 2:
-                            /**
-                             * System.out.println("Nº cilindradas: "); int
-                             * cilindradas = dados.nextInt(); Moto moto = new
-                             * Moto(modelo, cor, placa, CVs, pneus,
-                             * cilindradas);
-                            *
-                             */
+
                             Moto moto = new Moto();
-                            moto.inserir();
-                            VectCar.add(moto);
+                            Moto bike = moto.inserir();
+                            VectCar.add(bike);
                             break;
                         case 3:
-                            /**
-                             * System.out.println("Nº lugares: "); int lugares =
-                             * dados.nextInt(); Onibus bus = new Onibus(modelo,
-                             * cor, placa, CVs, pneus, lugares);
-                            *
-                             */
+
                             Onibus bus = new Onibus();
-                            bus.inserir();
-                            VectCar.add(bus);
+                            Onibus onibus = bus.inserir();
+                            VectCar.add(onibus);
                             break;
                     }
 
@@ -89,61 +64,24 @@ public class ProjetoCFC {
                     System.out.println("2-ATENDENTE");
                     System.out.println("3-ALUNO");
                     int k = dados.nextInt();
-                    /**
-                     * System.out.println("#DADOS BASICOS#");
-                     * System.out.println("nome: "); String Nome = dados.next();
-                     * System.out.println("CPF: "); String Cpf = dados.next();
-                     * System.out.println("Nascimento(xx/xx/xxxx): "); String
-                     * Nascimento = dados.next();
-                     * System.out.println("-----------------"); Endereco end =
-                     * new Endereco(); end.inserir();
-                    *
-                     */
+              
                     switch (k) {
                         case 1:
-                            /**
-                             * flag = "instrutor"; System.out.println("#DADOS
-                             * EXCLUSIVOS#"); System.out.println("Cod ID
-                             * instrutor: "); String codID = dados.next();
-                             * System.out.println("Digite a placa do carro para
-                             * este instrutor: "); placa = dados.next(); //int i
-                             * = 0; for (int l = 0; l < VectCar.size(); l++) {
-                             * String placaVeic = VectCar.get(l).placa;
-                             * Automovel car = VectCar.get(l); if
-                             * (placaVeic.equals(placa)) { Instrutor inst = new
-                             * Instrutor(flag, Nome, Cpf, Nascimento, codID,
-                             * end, car); VectPerson.add(inst); } }
-                               *
-                             */
+                           
                             Instrutor inst = new Instrutor();
-                            inst.inserir();
+                            inst.inserir(VectCar, VectPerson);
                             VectPerson.add(inst);
                             break;
 
                         case 2:
-                            /**
-                             * flag = "atendente"; System.out.println("Turno de
-                             * trabalho: "); String turno = dados.next();
-                             * System.out.println("Cod ID atendente "); int
-                             * codAtendente = dados.nextInt();
-                             *
-                             * Atendente atend = new Atendente(flag, Nome, Cpf,
-                             * Nascimento, turno, codAtendente, end);
-                     *
-                             */
+                          
                             Atendente atend = new Atendente();
                             atend.inserir();
                             VectPerson.add(atend);
                             break;
 
                         case 3:
-                            /**
-                             * flag = "aluno"; System.out.println("categoria
-                             * hablitação: "); String CatHab = dados.next();
-                             * Aluno aluno = new Aluno(flag, Nome, Cpf,
-                             * Nascimento, CatHab, end);
-                            *
-                             */
+                           
                             Aluno aluno = new Aluno();
                             aluno.inserir();
                             VectPerson.add(aluno);
@@ -157,19 +95,12 @@ public class ProjetoCFC {
                         VectCar.stream().map((vector) -> {
                             vector.exibirDados();
                             return vector;
-                        }).forEachOrdered((_item) -> {
+                        }).forEachOrdered((item) -> {
                             System.out.println("------------");
                         });
                     }
                     break;
                 case 4:
-                    /**
-                     * if (VectPerson.isEmpty() == true) {
-                     * System.out.println("nenhuma pessoa cadastrada"); } else {
-                     * for (Pessoa vector : VectPerson) { vector.exibirDados();
-                     * System.out.println("------------"); }
-                     *
-                     */
 
                     System.out.println("1-LISTAR INSTRUTOR");
                     System.out.println("2-LISTAR ATENDENTE");
